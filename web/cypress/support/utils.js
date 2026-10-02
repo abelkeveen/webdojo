@@ -1,0 +1,9 @@
+ // Função nativa que retorna a data de hoje no formato DD/MM/AAAA.
+ export function getTodayFormattedDate() {
+    const today = new Date();
+    const day = String(today.getDate()).padStart(2, '0');
+    const month = String(today.getMonth() + 1).padStart(2, '0'); // Months start at 0
+    const year = today.getFullYear();
+    
+    return `${day}/${month}/${year}`;
+}
